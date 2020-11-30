@@ -20,68 +20,72 @@
 "use strict"
 
 // Variant_1
-// const country = prompt("Укажите страну доставки")
-// let price = 0
+const country = prompt("Укажите страну доставки")
+let price = 0
 
-// const countryNormalized = country[0].toUpperCase() + country.slice(1).toLowerCase()
+if (!country) {
+  alert("Отменено пользователем");
+}
+else {
+  const countryNormalized = country[0].toUpperCase() + country.slice(1).toLowerCase()
 
-// // let countryNormalized = ""
-// // for (let i = 0; i < country.length; i += 1) {
-// //   if (i === 0) countryNormalized = country[i].toUpperCase()
-// //   else countryNormalized += country[i].toLowerCase()
-// // }
+  // let countryNormalized = ""
+  // for (let i = 0; i < country.length; i += 1) {
+  //   if (i === 0) countryNormalized = country[i].toUpperCase()
+  //   else countryNormalized += country[i].toLowerCase()
+  // }
 
-// switch (countryNormalized) {
-//   case "Китай":
-//     price = 100
-//     break
-//   case "Чили":
-//     price = 250
-//     break
-//   case "Австралия":
-//     price = 170
-//     break
-//   case "Индия":
-//     price = 80
-//     break
-//   case "Ямайка":
-//     price = 120
-//     break
-// }
+  switch (countryNormalized) {
+    case "Китай":
+      price = 100
+      break
+    case "Чили":
+      price = 250
+      break
+    case "Австралия":
+      price = 170
+      break
+    case "Индия":
+      price = 80
+      break
+    case "Ямайка":
+      price = 120
+      break
+  }
 
-// if (price) alert(`Доставка в ${countryNormalized} будет стоить ${price} кредитов`)
-// else alert("В вашей стране доставка недоступна")
-
+  if (price) alert(`Доставка в ${countryNormalized} будет стоить ${price} кредитов`)
+  else alert("В вашей стране доставка недоступна")
+}
 // Variant_2
 
-let price = 0
-const buttonRef = document.querySelector('button[name = "btn-country"]')
+// let price = 0
+// const buttonRef = document.querySelector('button[name = "btn-country"]')
 
-buttonRef.addEventListener("click", () => {
-  const countryInputRef = document.querySelector('input[name = "country"]')
-  if (countryInputRef.value) {
-    const country = countryInputRef.value[0].toUpperCase() + countryInputRef.value.slice(1).toLowerCase()
-    console.log(country)
+// buttonRef.addEventListener("click", () => {
+//   const countryInputRef = document.querySelector('input[name = "country"]')
+//   if (countryInputRef.value) {
+//     const country = countryInputRef.value[0].toUpperCase() + countryInputRef.value.slice(1).toLowerCase()
+//     console.log(country)
 
-    switch (country) {
-      case "Китай":
-        price = 100
-        break
-      case "Чили":
-        price = 250
-        break
-      case "Австралия":
-        price = 170
-        break
-      case "Индия":
-        price = 80
-        break
-      case "Ямайка":
-        price = 120
-        break
-    }
+//     switch (country) {
+//       case "Китай":
+//         price = 100
+//         break
+//       case "Чили":
+//         price = 250
+//         break
+//       case "Австралия":
+//         price = 170
+//         break
+//       case "Индия":
+//         price = 80
+//         break
+//       case "Ямайка":
+//         price = 120
+//         break
+//     }
 
-    if (price) console.log(`Доставка в ${country} будет стоить ${price} кредитов`)
-    else console.log("В вашей стране доставка недоступна")
-  } else console.log("Отменено пользователем")
-})
+//     if (price) console.log(`Доставка в ${country} будет стоить ${price} кредитов`)
+//     else console.log("В вашей стране доставка недоступна")
+//   } else console.log("Отменено пользователем")
+// })

@@ -42,7 +42,7 @@
 
 let total = 0;
 const buttonConfirmRef = document.querySelector('button[name = "btn-confirm"]');
-const ButtonCancelRef = document.querySelector('button[name = "btn-cancel"]');
+const buttonCancelRef = document.querySelector('button[name = "btn-cancel"]');
 
 buttonConfirmRef.addEventListener("click", () => {
   const inputRef = document.querySelector('input[name = "number"]');
@@ -53,7 +53,7 @@ buttonConfirmRef.addEventListener("click", () => {
   total += Number(input);
 })
 
-ButtonCancelRef.addEventListener("click", () => {
+buttonCancelRef.addEventListener("click", () => {
   console.log(`Общая сумма чисел равна ${total}`);
   total = 0;
 })
